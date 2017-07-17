@@ -17,7 +17,7 @@
        under the License.
  */
 
-package io.cordova.hellocordova;
+package <%PACKAGE_NAME%>;
 
 import android.os.Bundle;
 import android.webkit.WebView;
@@ -25,8 +25,6 @@ import android.webkit.WebView;
 import com.braintreepayments.popupbridge.PopupBridge;
 
 import org.apache.cordova.*;
-
-import cordova.plugin.PopupBridgePlugin;
 
 public class MainActivity extends CordovaActivity
 {
