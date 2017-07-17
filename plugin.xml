@@ -13,7 +13,6 @@
             <preference name="android-minSdkVersion" value="19" />
         </config-file>
 
-        <source-file src="src/android/MainActivity.java" target-dir="src/cordova/plugin" />
         <hook type="after_prepare" src="hooks/android/override_activity.js" />
 
         <framework src="com.braintreepayments:popup-bridge:0.1.+" />
