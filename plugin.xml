@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+        xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-popupbridge"
+        version="0.0.1">
+    <name>Popup Bridge</name>
+    <description></description>
+    <license>MIT</license>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <preference name="android-minSdkVersion" value="19" />
+        </config-file>
+
+        <source-file src="src/android/MainActivity.java" target-dir="src/cordova/plugin" />
+        <hook type="after_prepare" src="hooks/android/override_activity.js" />
+
+        <framework src="com.braintreepayments:popup-bridge:0.1.+" />
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.braintreepayments.popupbridge.PopupBridgeActivity"
+                      android:launchMode="singleTask">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <data android:scheme="${applicationId}.popupbridge" />
+                </intent-filter>
+            </activity>
+        </config-file>
+
+
+    </platform>
+</plugin>

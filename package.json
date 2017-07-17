@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "cordova-plugin-popupbridge",
+  "cordova_name": "Popup Bridge",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-popupbridge",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "xml2js": "^0.4.17"
+  }
+}
